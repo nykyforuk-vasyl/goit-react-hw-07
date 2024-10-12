@@ -1,0 +1,11 @@
+.list {
+    margin-top: 26px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    border: 2px solid #303030;
+    padding: 26px 16px;
+    border-radius: 8px;
+    background-color: #c0d8d7;
+    width: 1200px;
+}
