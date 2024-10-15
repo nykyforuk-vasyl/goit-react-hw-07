@@ -1,11 +1,11 @@
 .list {
-    margin-top: 26px;
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
-    border: 2px solid #303030;
-    padding: 26px 16px;
+    gap: 20px;
+    border: 3px solid #7e7e7e;
+    padding: 20px 16px;
     border-radius: 8px;
-    background-color: #c0d8d7;
-    width: 1200px;
+    background-color: rgb(236, 236, 236);
+    width: 740px;
+    justify-content: center;
 }

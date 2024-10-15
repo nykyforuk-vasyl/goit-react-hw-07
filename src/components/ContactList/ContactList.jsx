@@ -1,31 +1,27 @@
 import Contact from "../Contact/Contact";
 import s from "./ContactList.module.css";
-import { useSelector } from "react-redux";
-import { selectContact } from "../../redux/contactsSlice";
-import { selectNameFilter } from "../../redux/filtersSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { selectFilteredContacts } from "../../redux/contactsSlice";
+import { useEffect } from "react";
+import { fetchContacts } from "../../redux/contactsOps";
 
 const ContactList = () => {
-  const contacts = useSelector(selectContact);
-  const filter = useSelector(selectNameFilter);
+  const filteredContacts = useSelector(selectFilteredContacts);
+  const dispatch = useDispatch();
 
-  const filteredContacts = Array.isArray(contacts)
-    ? contacts.filter((contact) =>
-        contact.name.toLowerCase().includes(filter.toLowerCase())
-      )
-    : [];
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
 
   return (
     <>
-      <ul className={s.list}>
-        {filteredContacts.map((item) => (
-          <Contact
-            key={item.id}
-            name={item.name}
-            phone={item.number}
-            id={item.id}
-          />
-        ))}
-      </ul>
+      <div>
+        <ul className={s.list}>
+          {filteredContacts.map((item) => (
+            <Contact key={item.id} {...item} />
+          ))}
+        </ul>
+      </div>
     </>
   );
 };

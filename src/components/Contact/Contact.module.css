@@ -1,14 +1,14 @@
 .listItem {
     border: 1px solid rgb(117, 117, 117);
     border-radius: 10px;
-    padding: 20px;
-    width: 280px;
+    padding: 12px;
+    width: 310px;
     display: flex;
     gap: 20px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
-    background-color: #ececec;
+    margin-bottom: 10px;
+    background-color: #ffffff;
 }
 
 .wraper {
@@ -16,40 +16,45 @@
     flex-direction: column;
     gap: 8px;
     text-align: left;
-    margin-right: 14px;
 }
 
 .iconUser {
     margin-right: 8px;
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
 }
 
 .name {
     display: flex;
     align-items: center;
     gap: 5px;
-    font-size: 14px;
-    font-style: italic;
+    font-size: 15px;
     font-weight: 500;
     color: black;
 }
 
 
 .deleteButton {
-    background-color: #13b4f3;
-    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    font-size: 14px;
     font-style: italic;
-    border-radius: 10px;
+    border-radius: 50px;
     border: transparent;
-    border: 3px solid #2292dd;
+    border: 2px solid #000000;
+    outline: none;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
     color: black;
+    width: 76px;
+    height: 38px;
 }
 
 .deleteButton:hover {
-    background-color: #14a8e2;
-    border: 3px solid #2292dd;
+    background-color: rgb(247, 247, 247);
+    border: 3px solid #000000;
+    outline: none;
 }
 
 .deleteButton:focus {
